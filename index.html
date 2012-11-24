@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Unboxing the Web</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <!--<link rel="stylesheet" media="all" href="theme/css/custom.css">-->
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0" class="weavebg">
+
+<slides class="layout-widescreen">
+
+  <slide hidden class="logoslide nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/logonetlinks.png"></span>
+    </article>
+  </slide>
+
+  <slide hidden class="fill nobackground" data-body-class="nobackground">
+    <article>
+      <iframe width="640" height="390" data-src="http://www.youtube.com/embed/R0T13iiAzLM?autoplay=0&origin=http://localhost" frameborder="0"></iframe>
+    </article>
+  </slide>
+
+  <slide class="title-slide segue nobackground">
+    <aside class="gdbar"><img src="images/logonetlinks.png"></aside>
+    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Who <em>is</em> this Guy?</h2>
+    </hgroup>
+    <article id="who">
+      <span class="build"><p class="avatar rounded"></p></span>
+      <p data-config-presenter-title></p>
+      <p data-config-presenter-company></p>
+      <p style="margin-top:2em;">
+        <a rel="author" data-config-gplus>
+          <img src="images/fb_icon.png" width="44" height="44"></a> <a rel="author" data-config-gplus><span data-config-presenter-name></span></a>
+      </p>
+      <p>
+        <a rel="author" style="margin-left:-8px;" data-config-twitter>
+          <img src="images/twitter_newbird_blue.png" width="58" height="58"></a> <a rel="author" style="margin-left:-5px;" data-config-twitter></a>
+      </p>
+      <p>
+        <a rel="author" data-config-www></a>
+      </p>
+    </article>
+  </slide>
+	
+
+	<slide>
+		<hgroup>
+		  <h2>HTML5 Audio  </h2>
+		</hgroup>
+		<br/>
+		<article class="build">
+				<pre class="prettyprint" data-lang="css" style="width:1100px;float:left;">&ltaudio controls >&lt!--autoplay--><br> &ltsource src="./music/01.mp4" type="audio/mpeg" ><br> &ltsource src="./music/audio.ogg" type="audio/ogg" ><br> Your browser does not support the audio tag.<br>&lt/audio>
+				</pre>
+			<br>
+			<audio width="970px" controls ><!--autoplay-->
+			  <source src="./videos/audio.mp3" type="audio/mpeg" >
+			  <source src="./videos/audio.ogg" type="audio/ogg" >
+			  Your browser does not support the audio tag.
+			</audio> 
+		</article>
+	</slide>
+	<slide>
+		<hgroup>
+		  <h2>HTML5 Video </h2>
+		</hgroup>
+		<br/>
+		<article class="build">
+			<pre class="prettyprint" data-lang="css" style="width:1100px;float:left;">
+			<br/>&ltvideo width="970px" controls >&lt!--autoplay--><br> &ltsource src="./videos/flux.mp4" type="video/mp4" ><br> &ltsource src="./videos/flux.ogg" type="video/ogg" ><br> Your browser does not support the video tag.<br>&lt/video> 
+			</pre>
+			<br>
+			<video width="970px" controls ><!--autoplay-->
+			  <source src="./videos/flux.mp4" type="video/mp4" >
+			  <source src="./videos/flux.ogg" type="video/ogg" >
+			  Your browser does not support the video tag.
+			</video> 
+			<h6 style="font-size:14px;">from candas sisman</h6>
+		</article>
+	</slide>
+	
+
+	<slide>
+		<hgroup>
+		  <h2>@font-face </h2>
+		</hgroup>
+		<br/>
+		<article class="build">
+			<pre class="prettyprint" data-lang="css" style="width:1100px;float:left;">
+			<br/>@font-face<br>{<br> font-family:name<br> font-src:url('helvetica.ttf'),url('helvetica.eot'); /* IE9+ */<br> } 
+			</pre>
+			<br>
+		</article>
+	</slide>
+	
+	<slide>
+		<hgroup>
+		  <h2>Filtres </h2>
+		</hgroup>
+		<br/>
+		<article class="build">
+			<pre class="prettyprint" data-lang="css" style="width:1100px;float:left;">
+			<br/>#box<br>{<br> filter:contrast(170%) brightness(0.7) sepia(80%); <br> /*grayscale(60%) hue-rotate(20deg) blur(5px) saturate(30%) invert(70%)*/ <br> -webkit-filter:contrast(170%) brightness(0.7) sepia(80%); <br>} 
+			</pre>
+			<br>
+			<img src="./images/edit.jpg" style="-webkit-filter:sepia(70%);">
+		</article>
+	</slide>
+
+
+	<slide>
+		<hgroup>
+		  <h2>Transitions </h2>
+		</hgroup>
+		<br/>
+		<article class="build">
+			<pre class="prettyprint" data-lang="css" style="width:1100px;float:left;">
+			<br/>#box<br>{<br> transition:background-color 2s ease-in 0.5s; /* ease ease-out */<br> -webkit-transition:background-color 2s ease-in 0.5s; /* -moz- -o- -ms- */<br> } 
+			</pre>
+			<br>
+			<div style="clear:both;">
+			<style type="text/css">
+				#d555
+				{
+					position:relative;
+					top:100px;
+					width:200px;
+					height:150px;
+					background:#fff000;
+					-webkit-transition:background-color 2s ease-in 0.5s;
+				}				
+				#d555:hover
+				{
+					background-color:#ff0000
+				}
+				</style>
+			<div id="d555"> </div>
+			</div>
+		</article>
+	</slide>
+	
+
+	<slide>
+		<hgroup>
+		  <h2>Animations </h2>
+		</hgroup>
+		<br/>
+		<article class="build">
+			<pre class="prettyprint" data-lang="css" style="width:1100px;float:left;">
+			<br/>@keyframes anim_name<br>{<br> 0% {<br> background-color:#ff0000;<br> }<br> 50% {<br> background-color:#fff000;<br> }<br> 100% {<br> background-color:#0000ff;<br> }<br>} <br>/*@-webkit-keyframes ...*/
+			</pre>
+			<br>
+		</article>
+	</slide>
+	
+	<slide>
+		<hgroup>
+		  <h2>Animations</h2>
+		</hgroup>
+		<br/>
+		<article class="build">
+			<pre class="prettyprint" data-lang="css" style="width:1100px;float:left;">
+			<br/>#box<br>{<br> animation:anim_name 2s ease-out 1s infinite; /* ease ease-out */<br> -webkit-animation:anim_name 2s ease-out 1s infinite; /* -moz- -o- -ms- */<br> } 
+			</pre>
+			<br>
+			<div style="clear:both;">
+			<style type="text/css">
+				@-webkit-keyframes anim
+				{ 
+					0% { 
+					background-color:#ff0000; }
+					50% { 
+					background-color:#fff000;}
+					100% { 
+					background-color:#0000ff; }
+				}
+				#d666
+				{
+
+					width: 100px;
+					height: 100px;
+					background-color:#00ff00;
+
+					-webkit-animation:anim 3s ease-out 2s infinite;
+					animation:anim 3s ease-out 2s infinite;
+				}				
+			</style>
+			<div id="d666"> </div>
+			</div>
+		</article>
+	</slide>
+
+
+<!--
+  <slide class="nobackground">
+    <article class="flexbox vcenter" id="chrome-heart">
+      <div class="chrome-logo spin"></div>
+      <h1 title="BFFs"><div class="jitter"></div> <img src="images/HTML5_Badge_128.png" style="margin-bottom:-24px;height:85px;"></h1>
+      <p class="toppadding"><a href="https://plus.google.com/b/102860501900098846931/102860501900098846931">+Google Chrome Developers</a></p>
+    </article>
+  </slide>
+-->
+  <slide class="thank-you-slide segue nobackground">
+
+    <article class="flexbox vleft auto-fadein">
+      <h2>&lt; Thank You! &gt;</h2>
+      <p> <a href="https://github.com/ebidel/html5can" class="white" style="border:none"></a></p>
+    </article>
+    <p class="auto-fadein" data-config-contact>
+      <!-- populated from slide_config.json -->
+    </p>
+  </slide>
+
+  <slide class=" dark nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/logonetlinks.png"></span>
+    </article>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<!--
+<script src="js/app.js"></script>
+-->
+<script src="js/angular-1.0.0.min.js" async></script>
+
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-32630298-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>
